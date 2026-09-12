@@ -13,12 +13,15 @@ private:
     string grade;
 
 public:
+    Student();
     Student(int r, string n, int m[5]);
      ~Student();  
     void display();
     void calculatePercentage();
     void calculateGrade();
 };
+
+Student::Student() : rollNo(0), name(""), marks{0, 0, 0, 0, 0}, percentage(0.0), grade("") {}
 
 Student::Student(int r, string n, int m[5]) {
     rollNo = r;
@@ -67,11 +70,33 @@ void Student::calculateGrade() {
 }
 
 int main() {
-    int marks[5] = {85, 90, 78, 92, 88};
-    Student student1(1, "John Doe", marks);
-    student1.calculatePercentage();
-    student1.calculateGrade();
-    student1.display();
+    cout << "enter no of students" << endl;
+    int n;
+    cin >> n;
+    Student* students = new Student[n]; 
 
+    for (int i = 0; i < n; i++) {
+        cout << "Enter details for student " << i + 1 << ":" << endl;
+        int rollNo;
+        string name;
+        int marks[5];
+        cout << "Roll No: ";
+        cin >> rollNo;
+        cout << "Name: ";
+        cin >> name;
+        cout << "Marks (5 subjects): ";
+        for (int j = 0; j < 5; j++) {
+            cin >> marks[j];
+        }
+        students[i] = Student(rollNo, name, marks);
+    }
+
+    for (int i = 0; i < n; i++) {
+        students[i].calculatePercentage();
+        students[i].calculateGrade();
+        students[i].display();
+    }
+
+    delete[] students; 
     return 0;
 }
