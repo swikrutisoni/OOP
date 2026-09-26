@@ -60,14 +60,11 @@ public:
 
 int main() {
 
-    // Multiple Books
     Book books[3] = {
         Book("C++", 100, 10, "Bjarne"),
         Book("Java", 150, 20, "James"),
         Book("Python", 200, 15, "Guido")
     };
-
-    // Multiple Magazines
     Magazine magazines[2] = {
         Magazine("TechToday", 50, 20, "September"),
         Magazine("ScienceWorld", 80, 15, "October")
@@ -75,18 +72,13 @@ int main() {
 
     double totalSale = 0;
 
-    // Order copies for all books
     for (int i = 0; i < 3; i++) {
         books[i].orderCopies();
     }
 
-    // Order copies for all magazines
     for (int i = 0; i < 2; i++) {
         magazines[i].orderQty();
     }
-
-    // Display books
-    cout << "\n----- BOOK DETAILS -----" << endl;
 
     for (int i = 0; i < 3; i++) {
 
@@ -99,8 +91,6 @@ int main() {
         totalSale += books[i].Price * books[i].Copies;
     }
 
-    // Display magazines
-    cout << "\n----- MAGAZINE DETAILS -----" << endl;
 
     for (int i = 0; i < 2; i++) {
 
