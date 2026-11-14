@@ -1,0 +1,48 @@
+What is an Exception?
+An exception is an abnormal condition or unexpected situation that occurs during program execution and interrupts the normal flow of the program.
+
+Examples:
+- Dividing an integer by zero.
+- Trying to open a file that doesn't exist.
+- Accessing a resource that is unavailable.
+- Invalid input supplied to a program.
+3. What is Exception Handling?
+Exception Handling is a mechanism used to detect and handle exceptional situations during program execution so that the program can respond appropriately.
+
+For example:
+
+Instead of allowing an invalid division operation, we can check the denominator and display an appropriate error message.
+4. Why do we need Exception Handling?
+1. Prevents abnormal termination: Helps handle exceptional situations instead of letting them go unhandled.
+2. Maintains normal program flow: Allows the program to continue after a handled exception, where appropriate.
+3. Separates error-handling code: Keeps exceptional handling separate from normal program logic.
+4. Improves reliability: Makes programs more robust when unexpected situations occur.
+
+Topic 2: Basics of Exception Handling
+
+
+1. How does exception handling work?
+C++ provides three main keywords for exception handling:
+Keyword	Purpose
+try	    Contains code that may generate an exception.
+throw	Signals or raises an exception.
+catch	Handles the exception thrown from the try block.
+
+Think of them this way:
+- try → Try executing this code.
+- throw → Something exceptional happened; signal it.
+- catch → Handle that exceptional situation.
+
+Algorithm of basic exception handling
+Algorithm: Exception Handling
+1. Start the program.
+2. Enter the try block.
+3. Execute the statements inside the try block.
+4. If an exceptional condition occurs, throw an exception.
+5. Transfer control to the matching catch block.
+6. Execute the statements inside the catch block.
+7. Continue execution after the catch block.
+8. Stop.
+
+mportant exam point: Once an exception is thrown, the remaining statements inside that try block are skipped. 
+Control transfers to the matching catch block.

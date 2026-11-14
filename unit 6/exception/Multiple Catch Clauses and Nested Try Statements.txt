@@ -1,0 +1,11 @@
+What are Multiple Catch Clauses?
+Sometimes a program can generate different types of exceptions.
+
+For example:
+- An integer exception.
+- A floating-point exception.
+- A string exception.
+
+Multiple catch clauses allow a single try block to be followed by multiple catch blocks, 
+each designed to handle a particular type of exception.
+
