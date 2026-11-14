@@ -1,0 +1,54 @@
+Generic Programming is a programming approach in which we write code that can work with different data types 
+without rewriting the same logic for each type.
+
+A template allows us to write a function or class that works with different data types.
+function template is a blueprint for creating a function that works with different data types.
+
+template <typename T>
+T findMax(T a, T b) {
+    return (a > b) ? a : b;
+}
+
+
+Let's understand each part:
+- template — tells the compiler that we are declaring a template.
+- typename T — declares T as a placeholder for a data type.
+- T findMax(T a, T b) — the return type and both parameter types use the placeholder T.
+- return — returns whichever value is greater.
+
+Function templates support code reusability by allowing the same function definition to operate on different data types.
+
+
+##Explicit Template Arguments
+findMax<double>(10, 5.5);
+
+
+Now:
+- We explicitly tell the compiler that T = double.
+- 10 is converted to double.
+- 5.5 is already a double.
+The function works with both values as double.
+
+findMax<double>(10, 5.5);
+
+
+Now:
+- We explicitly tell the compiler that T = double.
+- 10 is converted to double.
+- 5.5 is already a double.
+The function works with both values as double.
+
+##unction Template with Two Different Type Parameters
+template <typename T, typename U>
+void display(T a, U b) {
+    cout << a << " " << b;
+}
+
+Exam notes — Function Templates
+1. A function template is a blueprint for creating functions that work with different data types.
+2. It supports code reusability and reduces code duplication.
+3. It is declared using the template keyword.
+4. typename or class can be used to declare a type parameter.
+5. The compiler can deduce template argument types automatically.
+6. Explicit template arguments can also be specified by the programmer.
+7. Multiple template parameters allow different argument types
