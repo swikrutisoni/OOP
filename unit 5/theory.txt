@@ -1,0 +1,27 @@
+File handling in C++ is a process of creating, opening, reading, writing and closing files to store data permanently,
+ even after the program has finished executing.
+
+ Why do we need File Handling?
+The main reasons are:
+1. Permanent storage: Data remains saved even after the program terminates.
+2. Handling large amounts of data: We can store thousands of student records without keeping everything in RAM.
+3. Data reuse: Saved data can be accessed whenever required.
+4. Real-world applications: Used in student databases, bank transaction records, logs and configuration files.
+
+A stream is a sequence of bytes through which data flows between a program and an input/output device or file.
+
+fstream – provides classes used for file handling.
+
+Topic 2: Classes for File Stream Operations
+C++ provides three important classes for performing file operations.
+
+They are available in the <fstream> header file.
+1. ifstream – Input File Stream
+- i stands for Input.
+- Used to read data from a file.
+- Data flows from the file into the program.
+
+2. ofstream – Output File Stream
+- o stands for Output.
+- Used to write data into a file.
+- Data flows from the program into the file.
