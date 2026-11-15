@@ -1,0 +1,91 @@
+Topic 1 — Single Responsibility Principle (SRP)
+Definition: A class should have only one responsibility, meaning it should have only one reason to change.
+
+In simple words:
+
+A class should focus on one specific job instead of handling multiple unrelated tasks.
+Example
+Imagine a Student class that does three things:
+1. Stores student details.
+2. Calculates student marks.
+3. Prints the student's report.
+These are separate responsibilities. If the report format changes, we need to modify the same class that also handles student data and calculations.
+
+SRP suggests separating these responsibilities into appropriate classes.
+
+Exam Notes
+- SRP stands for Single Responsibility Principle.
+- It is the first principle of SOLID.
+- A class should have one responsibility and one reason to change.
+- It improves maintainability, readability and reduces coupling between unrelated responsibilities.
+
+SRP does not mean one class can have only one method. It means one class should have one cohesive responsibility.
+
+Advantages:
+1. Better code maintainability.
+2. Improved readability.
+3. Reduced coupling.
+4. Easier testing and debugging.
+
+Topic 2 — Open/Closed Principle.
+
+Definition: Software entities (classes, modules, functions) should be:
+- Open for extension: We should be able to add new functionality.
+- Closed for modification: We should avoid changing existing, tested code just to add new functionality.
+
+Exam Notes
+- OCP stands for Open/Closed Principle.
+- It is the second principle of SOLID.
+- Software entities should be open for extension but closed for modification.
+- New functionality should ideally be added without changing existing stable code.
+- Inheritance and polymorphism are commonly used to achieve OCP in C++.
+
+Advantages:
+1. Makes adding new features easier.
+2. Reduces the risk of breaking existing code.
+3. Improves maintainability.
+4. Supports code reusability.
+
+Topic 3 --> Liskov Substitution Principle (LSP)
+LSP stands for Liskov Substitution Principle.
+It is the third principle of SOLID.
+defination:A child class should be able to replace its parent class without changing the correctness of the program.
+In simple language:
+If a class inherits from another class, then the child class should be able to do everything that the parent class promises, without causing unexpected errors.
+It helps create reliable inheritance hierarchies.
+
+Advantages:
+1. Makes inheritance more reliable.
+2. Prevents unexpected behaviour.
+3. Improves code reusability.
+4. Supports flexible program design.
+
+Topic 4 -->Interface Segregation Principle (ISP)
+Definition: A class should not be forced to implement methods that it does not need.
+
+Exam Notes
+- ISP stands for Interface Segregation Principle.
+- It is the fourth principle of SOLID.
+- A class should not be forced to implement methods it does not use.
+- Large interfaces should be divided into smaller, specific interfaces.
+- It reduces unnecessary dependencies and improves maintainability.
+
+Dependency Inversion Principle (DIP)
+Definition
+High-level modules should not depend directly on low-level modules. Both should depend on abstractions.
+Let's simplify this.
+- High-level module: Handles the main business logic.
+- Low-level module: Handles specific implementation details.
+- Abstraction: A common interface that connects them.
+
+##DIP stands for Dependency Inversion Principle.
+It is the fifth principle of SOLID.
+High-level modules should not depend directly on low-level modules.
+Both should depend on abstractions.
+Abstractions should not depend on details; details should depend on abstractions.
+It reduces tight coupling and improves flexibility and maintainability.
+
+Concepts to revise
+1. ISP vs SRP: ISP is about forcing classes to implement methods they don't need. SRP is about multiple reasons for a class to change.
+2. DIP vs SRP: Direct dependence on concrete implementations instead of abstractions points to DIP.
+3. Recognising the actual design problem: Don't choose a principle just because a class has many operations. Identify what is specifically going wrong.
